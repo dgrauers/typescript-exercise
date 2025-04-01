@@ -1,0 +1,22 @@
+{
+  "name": "typescript-exercise",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.ts",
+  "scripts": {
+    "dev": "vite"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dgrauers/typescript-exercise.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dgrauers/typescript-exercise/issues"
+  },
+  "homepage": "https://github.com/dgrauers/typescript-exercise#readme",
+  "devDependencies": {
+    "vite": "^6.2.4"
+  }
+}
