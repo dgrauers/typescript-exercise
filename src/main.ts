@@ -1,20 +1,20 @@
 interface Producto {
-  nombre: string
-  precio: number
+  nombre: string;
+  precio: number;
 }
 
 interface ItemCarrito {
-  producto: Producto,
-  cantidad: number,
+  producto: Producto;
+  cantidad: number;
 }
 
 let carrito: ItemCarrito[] = [];
 
-function agregarProducto (producto: Producto, cantidad: number) {
+function agregarProducto(producto: Producto, cantidad: number): void {
   carrito.push({ producto, cantidad });
 }
 
-function calcularTotal(impuesto) {
+function calcularTotal(impuesto: number): number {
   let total = 0;
   for (let item of carrito) {
     total += item.producto.precio * item.cantidad;
@@ -22,15 +22,15 @@ function calcularTotal(impuesto) {
   return total + impuesto;
 }
 
-function mostrarCarrito() {
+function mostrarCarrito(): void {
   for (let item of carrito) {
     console.log(`${item.producto.nombre} x${item.cantidad}`);
   }
   console.log(`Total: ${calcularTotal(10)}`);
 }
 
-let producto1 = { nombre: "Camiseta", precio: 20 };
-let producto2 = { nombre: "Pantalón", precio: 35 };
+let producto1 = { nombre: 'Camiseta', precio: 20 };
+let producto2 = { nombre: 'Pantalón', precio: 35 };
 
 agregarProducto(producto1, 2);
 agregarProducto(producto2, 1);
