@@ -1,6 +1,11 @@
+interface Producto {
+  nombre: string
+  precio: number
+}
+
 let carrito = [];
 
-function agregarProducto(producto, cantidad) {
+function agregarProducto (producto: Producto, cantidad: number) {
   carrito.push({ producto, cantidad });
 }
 
