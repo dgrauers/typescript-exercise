@@ -3,7 +3,12 @@ interface Producto {
   precio: number
 }
 
-let carrito = [];
+interface ItemCarrito {
+  producto: Producto,
+  cantidad: number,
+}
+
+let carrito: ItemCarrito[] = [];
 
 function agregarProducto (producto: Producto, cantidad: number) {
   carrito.push({ producto, cantidad });
